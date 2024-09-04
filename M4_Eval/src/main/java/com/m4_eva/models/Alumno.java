@@ -1,0 +1,40 @@
+package com.m4_eva.models;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Alumno {
+    private String rut;
+    private String nombre;
+    private String apellido;
+    private String direccion;
+    private List<Materia> materias;
+
+    public Alumno(String rut, String nombre, String apellido, String direccion){
+        this.rut = rut;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.direccion = direccion;
+        this.materias = new ArrayList<>();
+    }
+
+    public String getRut(){ return this.rut; }
+    public void setRut(String rut){ this.rut = rut; }
+
+    public String getNombre(){ return this.nombre; }
+    public void setNombre(String nombre){ this.nombre = nombre; }
+
+    public String getApellido(){ return this.apellido; }
+    public void setApellido(String apellido){ this.apellido = apellido; }
+
+    public String getDireccion(){ return this.direccion; }
+    public void setDireccion(String direccion){ this.direccion = direccion; }
+
+    public List<Materia> getMaterias(){ return this.materias; }
+    public void setMaterias(List<Materia> materias){ this.materias = materias; }
+
+    public void agregarMateria(Materia materia){
+        this.materias.add(materia);
+    }
+
+}
