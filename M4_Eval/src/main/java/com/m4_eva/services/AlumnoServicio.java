@@ -14,15 +14,19 @@ public class AlumnoServicio {
     public void crearAlumno(String rut, String nombre, String apellido, String direccion){
         Alumno alumno = new Alumno(rut, nombre, apellido, direccion);
         alumnos.add(alumno);
-
     }
 
-    public List<Alumno> listarAlumnos(){
-        return alumnos;
+    public List<Alumno> listarAlumnos() {
+        if (alumnos.isEmpty()) {
+            System.out.println("¡No hay alumnos registrados!");;
+        } else { return alumnos; }
+        return List.of();
     }
 
-    public Alumno buscarAlumnoPorRut(String rut){
-        return alumnos.stream().filter(alumno -> alumno.getRut().equals(rut)).findFirst().orElse(null);
+    public Alumno buscarAlumnoPorRut(String rut) {
+        return alumnos.stream()
+                .filter(alumno -> alumno.getRut().equals(rut))
+                .findFirst()
+                .orElse(null);
     }
-
 }
