@@ -12,9 +12,9 @@ public class ArchivoServicio {
 
         try(FileWriter writer = new FileWriter("listado_alumnos.txt")){
             for (Alumno alumno : alumnos) {
-                writer.write(alumno.getRut()+" - "+alumno.getNombre()+" "+alumno.getApellido()+"\n");
+                writer.write("Alumno: "+alumno.getRut()+" - "+alumno.getNombre()+" "+alumno.getApellido()+"\n");
                 for (Materia materia : alumno.getMaterias()){
-                    writer.write(" - "+ materia.getNombre()+": "+ materia.getNotas()+"\n");
+                    writer.write(" Materia: "+ materia.getNombre()+" - Promedio "+ materia.getPromedio()+"\n");
                 }
             }
             System.out.println("¡Datos exportados exitosamente!");

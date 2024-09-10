@@ -10,6 +10,7 @@ public class Alumno {
     private String direccion;
     private List<Materia> materias;
 
+
     public Alumno(String rut, String nombre, String apellido, String direccion){
         this.rut = rut;
         this.nombre = nombre;
